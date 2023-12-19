@@ -1,0 +1,42 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Generator</title>
+</head> -->
+<style type="text/css">
+    body{text-align:center}
+
+</style>
+
+
+
+<body>
+  <div class="container">
+    <div class="row">
+      <h2 class="mt-5">Act out a story for chatgpt!!</h2>
+
+      <img src="{{ url_for('video_feed') }}" height="80%" />
+
+      <form method="post" action="{{ url_for('tasks') }}">
+        <input type="submit" value="Capture" name="click" />
+      </form>
+
+      <img src="/static/images/story1.png" style="width: 10%" />
+      <img src="/static/images/story2.png" style="width: 10%" />
+      <img src="/static/images/story3.png" style="width: 10%" />
+      <img src="/static/images/story4.png" style="width: 10%" />
+      <img src="/static/images/story5.png" style="width: 10%" />
+      <img src="/static/images/story6.png" style="width: 10%" />
+
+      <form method="post" action="/story">
+        <button type="submit">Click here</button>
+      </form>
+
+      <h2>Here is your story!</h2>
+      <p>Story will show below! Make take a few mins...</p>
+      <p>{{story_index}}</p>
+    </div>
+  </div>
+</body>
